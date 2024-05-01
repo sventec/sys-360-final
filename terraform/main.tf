@@ -39,3 +39,11 @@ module "jumpbox" {
   subnet_id    = aws_subnet.public.id
 }
 
+module "mariadb" {
+  source = "./mariadb"
+
+  ssh_key_name = var.ssh_key_name
+  vpc_id       = aws_vpc.lamp-vpc.id
+  subnet_id    = aws_subnet.private.id
+}
+
