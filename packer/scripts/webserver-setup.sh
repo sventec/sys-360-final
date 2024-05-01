@@ -1,8 +1,8 @@
-#!/usr/bin/env bash
+#!/bin/bash -e
 
 sudo yum update -y
 sudo amazon-linux-extras install -y php7.2
-sudo yum install -y httpd
+sudo yum install -y httpd php-gd wget rsync
 
 sudo systemctl enable --now httpd
 
