@@ -56,9 +56,8 @@ resource "aws_eip" "webserver-eip" {
   tags       = { Name = "webserver-eip" }
 }
 
-# resource "aws_eip" "jumpbox-eip" {
-#   depends_on = [aws_internet_gateway.igw]
-#   # TODO: configure jumpbox module and add ID to EIP here
-#   # instance   = module.jumpbox.jumpbox_id
-#   tags = { Name = "jumpbox-eip" }
-# }
+resource "aws_eip" "jumpbox-eip" {
+  depends_on = [aws_internet_gateway.igw]
+  instance   = module.jumpbox.jumpbox_id
+  tags       = { Name = "jumpbox-eip" }
+}
