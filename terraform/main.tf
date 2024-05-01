@@ -7,6 +7,15 @@ terraform {
       version = "~> 5.47"
     }
   }
+
+  backend "s3" {
+    # store tfstate in S3 bucket instead of locally
+    bucket  = "sys-final-tfstate"
+    key     = "terraform/terraform.tfstate"
+    region  = "us-east-1"
+    profile = "voclab"
+  }
+
   required_version = ">= 1.7.0"
 }
 
