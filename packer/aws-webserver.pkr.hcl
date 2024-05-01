@@ -58,4 +58,3 @@ build {
     inline = ["sudo sed -i 's/password_here/${var.wp_db_password}/' /var/www/html/wp-config.php"]
   }
 }
-

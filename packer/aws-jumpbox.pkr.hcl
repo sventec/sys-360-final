@@ -35,4 +35,3 @@ build {
     "source.amazon-ebs.jumpbox"
   ]
 }
-

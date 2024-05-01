@@ -55,4 +55,3 @@ module "mariadb" {
   vpc_id       = aws_vpc.lamp-vpc.id
   subnet_id    = aws_subnet.private.id
 }
-

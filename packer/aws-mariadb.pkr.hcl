@@ -59,7 +59,7 @@ build {
 
   # set mariadb root password
   provisioner "shell" {
-    inline = [ "mysql -u root -pCHANGEME -e \"UPDATE mysql.user SET Password = PASSWORD('${var.db_password}') WHERE User = 'root'; FLUSH PRIVILEGES;\"" ]
+    inline = ["mysql -u root -pCHANGEME -e \"UPDATE mysql.user SET Password = PASSWORD('${var.db_password}') WHERE User = 'root'; FLUSH PRIVILEGES;\""]
   }
 
   # create wordpress DB and user
@@ -70,4 +70,3 @@ build {
     ]
   }
 }
-
