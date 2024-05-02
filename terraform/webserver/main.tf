@@ -18,4 +18,5 @@ resource "aws_instance" "webserver" {
   subnet_id              = var.subnet_id
   private_ip             = "10.10.10.25"
   tags                   = { Name = "webserver" }
+  monitoring             = true
 }

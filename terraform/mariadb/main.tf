@@ -18,4 +18,5 @@ resource "aws_instance" "mariadb" {
   subnet_id              = var.subnet_id
   private_ip             = "10.10.15.60"
   tags                   = { Name = "mariadb" }
+  monitoring             = true
 }
